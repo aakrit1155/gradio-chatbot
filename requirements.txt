@@ -1,0 +1,6 @@
+gradio
+langchain
+langchain-openai
+langchain-community
+langchain-google-genai
+langchain-anthropic
