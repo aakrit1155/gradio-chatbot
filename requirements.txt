@@ -4,3 +4,4 @@ langchain-openai
 langchain-community
 langchain-google-genai
 langchain-anthropic
+python-dotenv
