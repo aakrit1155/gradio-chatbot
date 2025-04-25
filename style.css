@@ -1,0 +1,196 @@
+/* Import a trendy font (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* --- Base & Theme --- */
+body {
+    /* background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); */
+    background-color: #111827; /* Dark background */
+    color: #E5E7EB; /* Light text */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main container styling */
+#main-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: rgba(31, 41, 55, 0.8); /* Slightly transparent dark card */
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(79, 70, 229, 0.4); /* Enhanced shadow + subtle glow */
+    border: 1px solid rgba(79, 70, 229, 0.3);
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+}
+
+/* --- Title --- */
+#title-markdown h1 {
+    font-family: 'Orbitron', sans-serif; /* Sci-fi/modern font */
+    color: #818CF8; /* Indigo light */
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 8px rgba(129, 140, 248, 0.7), 0 0 15px rgba(129, 140, 248, 0.5); /* Glow effect */
+    margin-bottom: 0.5em;
+}
+#title-markdown p {
+    text-align: center;
+    color: #D1D5DB; /* Gray light */
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+/* --- Rows & Sections --- */
+.content-row {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(55, 65, 81, 0.6); /* Darker inner background */
+    border-radius: 15px;
+    border: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+/* --- Input Fields (Dropdown, Textbox) --- */
+.input-field .wrap-inner, .input-field input, .input-field textarea, .input-field .secondary-wrap { /* Target Gradio's internal structure */
+    background-color: #1F2937 !important; /* Darker input background */
+    color: #E5E7EB !important; /* Light text */
+    border: 1px solid #4B5563 !important; /* Gray border */
+    border-radius: 10px !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px 12px !important;
+}
+.input-field input:focus, .input-field textarea:focus,
+.input-field .wrap-inner:focus-within { /* Glow on focus */
+    border-color: #6366F1 !important; /* Indigo */
+    box-shadow: 0 0 10px 2px rgba(99, 102, 241, 0.5) !important;
+    outline: none; /* Remove default outline */
+}
+.input-field label span { /* Style labels */
+   color: #9CA3AF !important; /* Gray medium */
+   font-weight: 400;
+   margin-bottom: 0.5rem !important;
+   display: inline-block;
+}
+.input-field .info { /* Style info text */
+    color: #6B7280 !important; /* Gray dark */
+    font-size: 0.9em;
+}
+
+/* Password field specific styling */
+.api-key-input input[type="password"] {
+    font-family: 'Courier New', Courier, monospace; /* Monospace for keys */
+}
+
+/* --- Buttons --- */
+.action-button {
+    background: linear-gradient(145deg, #6366F1, #8B5CF6) !important; /* Indigo to Purple gradient */
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 12px 20px !important;
+    font-weight: 600 !important;
+    font-size: 1em !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.action-button:hover {
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4), 0 0 12px rgba(139, 92, 246, 0.6); /* Enhanced shadow + glow */
+    background: linear-gradient(145deg, #4F46E5, #7C3AED) !important; /* Darker gradient on hover */
+}
+.action-button:active {
+    transform: translateY(0px); /* Press down */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Chat Interface --- */
+#chatbot-display .message-wrap { /* Target message bubbles */
+    border-radius: 15px !important;
+    padding: 12px 15px !important;
+    margin-bottom: 10px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 85%; /* Don't let messages take full width */
+    word-wrap: break-word;
+}
+
+/* User messages */
+#chatbot-display .message-wrap.user {
+    background: linear-gradient(135deg, #3B82F6, #2563EB) !important; /* Blue gradient */
+    color: white !important;
+    border-bottom-right-radius: 5px !important; /* Slightly different shape */
+    margin-left: auto; /* Align right */
+    border: 1px solid #1E40AF;
+}
+
+/* Bot messages */
+#chatbot-display .message-wrap.bot {
+    background-color: #374151 !important; /* Gray dark */
+    color: #E5E7EB !important;
+    border-bottom-left-radius: 5px !important; /* Slightly different shape */
+    margin-right: auto; /* Align left */
+    border: 1px solid #4B5563;
+}
+
+#chatbot-display {
+    background-color: #111827 !important; /* Match body background */
+    border-radius: 15px !important;
+    border: 1px solid #374151 !important;
+    padding: 10px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+#chatbot-display .copy-all-button { /* Style the copy button */
+    background-color: #4B5563 !important;
+    color: #D1D5DB !important;
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    margin: 5px !important;
+    transition: background-color 0.2s ease;
+}
+#chatbot-display .copy-all-button:hover {
+    background-color: #6B7280 !important;
+}
+
+/* --- Status Message --- */
+#validation-status {
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.5s ease; /* Fade in effect */
+}
+/* Add specific classes for success/error via Python updates if needed */
+#validation-status.success {
+    background-color: rgba(16, 185, 129, 0.2); /* Green tint */
+    color: #10B981; /* Green text */
+    border: 1px solid rgba(16, 185, 129, 0.5);
+}
+#validation-status.error {
+    background-color: rgba(239, 68, 68, 0.2); /* Red tint */
+    color: #EF4444; /* Red text */
+    border: 1px solid rgba(239, 68, 68, 0.5);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Responsive Adjustments (Example) --- */
+@media (max-width: 600px) {
+    #main-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    #title-markdown h1 {
+        font-size: 2em;
+    }
+    /* Adjust column scaling if needed */
+    #api-key-section .gradio-column { /* Example: stack elements on small screens */
+       min-width: 100% !important;
+    }
+    .action-button {
+        width: 100%; /* Make button full width */
+        margin-top: 0.5rem;
+    }
+}
